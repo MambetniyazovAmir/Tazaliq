@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -16,6 +17,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures {
+        dataBinding true
+    }
+
 
     buildTypes {
         release {
@@ -41,6 +47,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'org.osmdroid:osmdroid-android:6.1.2'
+    implementation 'com.github.MKergall:osmbonuspack:6.4'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
 
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

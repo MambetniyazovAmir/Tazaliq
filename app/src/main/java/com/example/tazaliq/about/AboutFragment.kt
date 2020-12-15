@@ -1,4 +1,8 @@
 package com.example.tazaliq.about
 
-class AboutFragment {
+import androidx.fragment.app.Fragment
+import com.example.tazaliq.R
+
+class AboutFragment: Fragment(R.layout.fragment_about) {
+
 }
