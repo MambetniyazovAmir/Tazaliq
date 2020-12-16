@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/location"
+        android:id="@+id/locationFragment"
         android:icon="@drawable/ic_location"
         android:title="@string/location" />
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/aboutFragment"
         android:icon="@drawable/ic_outline_info"
         android:title="@string/app_name" />
 
     <item
-        android:id="@+id/rating"
+        android:id="@+id/ratingFragment"
         android:icon="@drawable/ic_outline_cup"
         android:title="@string/rating" />
 
     <item
-        android:id="@+id/profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/ic_person"
         android:title="@string/profile" />
 
