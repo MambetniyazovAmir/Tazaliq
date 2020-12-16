@@ -2,10 +2,12 @@ package com.example.tazaliq.location
 
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.preference.Preference
 import androidx.preference.PreferenceManager
 import com.example.tazaliq.R
+import com.example.tazaliq.databinding.FragmentLocationBinding
 import org.osmdroid.api.IMapController
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -14,30 +16,37 @@ import org.osmdroid.views.MapView
 
 
 class LocationFragment : Fragment(R.layout.fragment_location) {
-//    private var map: MapView =
-//    private var mapController: IMapController =
-//
-//    private val TAG = "OsmActivity";
-//
-//
-//    private val PERMISSION_REQUEST_CODE = 1;
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        val ctx = requireContext().applicationContext
-//        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
-//        if (Build.VERSION.SDK_INT >= 23) {
-//
-//        }
-//        map.setTileSource(TileSourceFactory.MAPNIK)
-//        map.setBuiltInZoomControls(true)
-//        map.setMultiTouchControls(true)
-//        mapController = map.controller
-//        mapController.setZoom(15)
-//        val startPoint = GeoPoint(51496994, -134733);
-//        mapController.setCenter(startPoint)
-//    }
+    private lateinit var map: MapView
+    private lateinit var mapController: IMapController
+    private lateinit var binding: FragmentLocationBinding
+    private val TAG = "OsmActivity";
 
+
+    private val PERMISSION_REQUEST_CODE = 1;
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentLocationBinding.bind(view)
+        map = binding.mapView
+        val ctx = requireContext().applicationContext
+        Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
+        if (Build.VERSION.SDK_INT >= 23) {
+
+        }
+        map.setTileSource(TileSourceFactory.DEFAULT_TILE_SOURCE)
+        // map.setBuiltInZoomControls(true)
+        map.setMultiTouchControls(true)
+        mapController = map.controller
+        mapController.setZoom(15)
+        val startPoint = GeoPoint(42.442424, 59.632228);
+        mapController.setCenter(startPoint)
+    }
 //    public boolean isStoragePermissionGranted()
 //    {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
