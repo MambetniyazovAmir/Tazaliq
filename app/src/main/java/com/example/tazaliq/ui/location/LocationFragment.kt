@@ -1,4 +1,4 @@
-package com.example.tazaliq.location
+package com.example.tazaliq.ui.location
 
 import android.os.Bundle
 import android.view.View

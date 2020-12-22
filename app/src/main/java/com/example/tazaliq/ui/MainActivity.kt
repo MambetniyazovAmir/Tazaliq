@@ -1,9 +1,10 @@
-package com.example.tazaliq
+package com.example.tazaliq.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import com.example.tazaliq.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

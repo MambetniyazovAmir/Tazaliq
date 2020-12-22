@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.tazaliq.location.LocationFragment"
+        android:name="com.example.tazaliq.ui.location.LocationFragment"
         android:label="LocationFragment"
         tools:layout="@layout/fragment_location" />
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.tazaliq.about.AboutFragment"
+        android:name="com.example.tazaliq.ui.about.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.tazaliq.profile.ProfileFragment"
+        android:name="com.example.tazaliq.ui.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/ratingFragment"
-        android:name="com.example.tazaliq.rating.RatingFragment"
+        android:name="com.example.tazaliq.ui.rating.RatingFragment"
         android:label="RatingFragment"
         tools:layout="@layout/fragment_rating" />
 

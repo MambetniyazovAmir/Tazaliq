@@ -1,4 +1,4 @@
-package com.example.tazaliq.rating
+package com.example.tazaliq.ui.rating
 
 import androidx.fragment.app.Fragment
 import com.example.tazaliq.R
