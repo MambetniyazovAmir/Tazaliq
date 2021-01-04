@@ -24,7 +24,6 @@ val executorModule = module {
     single<Executor> { Executors.newSingleThreadExecutor() }
 }
 
-
 val viewModelModule = module {
     viewModel { AboutViewModel(get(), get()) }
 }

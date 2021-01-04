@@ -19,7 +19,6 @@ class TazaliqApp : Application() {
             androidContext(this@TazaliqApp)
             androidFileProperties()
             koin.loadModules(modules)
-            koin.createRootScope()
         }
     }
 }
