@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102301375829",
+    "project_id": "tazaliq-android",
+    "storage_bucket": "tazaliq-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102301375829:android:9632354f95db75e405e3dc",
+        "android_client_info": {
+          "package_name": "com.example.tazaliq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102301375829-m95gp4padjt4r9fmdi2nf4l33imi2ln7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzGdnuuZF1NHUhPyPKGjzfqpve_v0d4fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102301375829-m95gp4padjt4r9fmdi2nf4l33imi2ln7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
