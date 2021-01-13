@@ -19,7 +19,7 @@ class TazaliqApp : Application() {
             androidLogger()
             androidContext(this@TazaliqApp)
             androidFileProperties()
-            koin.loadModules(modules)
+            modules(modules)
         }
     }
 }
