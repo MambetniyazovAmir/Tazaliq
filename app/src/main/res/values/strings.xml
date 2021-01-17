@@ -3,4 +3,14 @@
     <string name="location">Пункты</string>
     <string name="rating">Рейтинг</string>
     <string name="profile">Профиль</string>
+    <string name="input_your_email">Введите Email</string>
+    <string name="sign_in">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="input_your_password">Введите пароль</string>
+    <string name="confirm_password">Повторите пароль</string>
+    <string name="please_fill_all_fields">Пожалуйста, заполните все полей.</string>
+    <string name="name">Amirniyaz</string>
+    <string name="bio">account bio</string>
+    <string name="stats">Статистика</string>
+    <string name="market">Магазин: 0Б</string>
 </resources>
