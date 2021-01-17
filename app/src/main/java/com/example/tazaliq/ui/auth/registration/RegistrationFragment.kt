@@ -39,7 +39,7 @@ class RegistrationFragment : BaseFragment(R.layout.fragment_registration) {
     }
 
     private val onSignInSuccess: (user: FirebaseUser) -> Unit = {
-        val action = LoginFragmentDirections.actionLoginFragment2ToMainFragment()
+        val action = RegistrationFragmentDirections.actionRegistrationFragmentToMainFragment()
         navController.navigate(action)
     }
 

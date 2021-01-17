@@ -22,7 +22,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
         binding = FragmentLoginBinding.bind(view)
         navController = Navigation.findNavController(view)
         binding.btnRegister.onClick {
-            val action = LoginFragmentDirections.actionLoginFragment2ToRegistrationFragment2()
+            val action = LoginFragmentDirections.actionLoginFragmentToRegistrationFragment2()
             navController.navigate(action)
         }
         binding.btnLogin.onClick {
@@ -40,7 +40,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
     }
 
     private val onSignInSuccess: (user: FirebaseUser) -> Unit = {
-        val action = LoginFragmentDirections.actionLoginFragment2ToMainFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()
         navController.navigate(action)
     }
 
