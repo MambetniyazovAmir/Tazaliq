@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.example.tazaliq.R
+import com.example.tazaliq.core.BaseFragment
 import com.example.tazaliq.databinding.FragmentLocationBinding
 import org.osmdroid.api.IMapController
 import org.osmdroid.config.Configuration
@@ -13,7 +14,7 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 
-class LocationFragment : Fragment(R.layout.fragment_location) {
+class LocationFragment : BaseFragment(R.layout.fragment_location) {
     private lateinit var map: MapView
     private lateinit var mapController: IMapController
     private lateinit var binding: FragmentLocationBinding

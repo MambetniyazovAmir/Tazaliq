@@ -7,7 +7,6 @@ import androidx.navigation.Navigation
 import com.example.tazaliq.R
 import com.example.tazaliq.core.BaseFragment
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.coroutines.delay
 import org.koin.android.ext.android.inject
 
 class SplashFragment : BaseFragment(R.layout.fragment_splash) {

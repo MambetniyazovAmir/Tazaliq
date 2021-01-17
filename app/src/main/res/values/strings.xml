@@ -9,8 +9,13 @@
     <string name="input_your_password">Введите пароль</string>
     <string name="confirm_password">Повторите пароль</string>
     <string name="please_fill_all_fields">Пожалуйста, заполните все полей.</string>
-    <string name="name">Amirniyaz</string>
+    <string name="name">Ваше имя</string>
     <string name="bio">account bio</string>
     <string name="stats">Статистика</string>
-    <string name="market">Магазин: 0Б</string>
+    <string name="market">Магазин:</string>
+    <string name="my_purchases">Мои покупки</string>
+    <string name="achievements">Достижения:</string>
+    <string name="about_myself">О себе</string>
+    <string name="default_about_text">Напишите коротко о себе и чем вы занимаетесь</string>
+    <string name="profile_title">Профиль</string>
 </resources>

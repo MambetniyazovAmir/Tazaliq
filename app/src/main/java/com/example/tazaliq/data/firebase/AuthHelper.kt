@@ -2,6 +2,7 @@ package com.example.tazaliq.data.firebase
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 
 class AuthHelper(private val auth: FirebaseAuth) {
 

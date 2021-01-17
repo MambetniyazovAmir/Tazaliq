@@ -39,8 +39,15 @@ class RegistrationFragment : BaseFragment(R.layout.fragment_registration) {
     }
 
     private val onSignInSuccess: (user: FirebaseUser) -> Unit = {
-        val action = RegistrationFragmentDirections.actionRegistrationFragmentToMainFragment()
-        navController.navigate(action)
+        viewModel.addUserToRemoteDB(it,
+            {
+                val action = RegistrationFragmentDirections.actionRegistrationFragmentToMainFragment()
+                navController.navigate(action)
+            },
+            { msg ->
+                toastLN(msg)
+            }
+        )
     }
 
     private val onSignInFailure: (msg: String?) -> Unit = {
