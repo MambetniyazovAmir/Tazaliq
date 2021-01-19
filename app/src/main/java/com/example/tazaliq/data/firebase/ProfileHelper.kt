@@ -1,10 +1,12 @@
 package com.example.tazaliq.data.firebase
 
 import android.util.Log
+import com.example.tazaliq.data.model.City
 import com.example.tazaliq.data.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 
 class ProfileHelper(private val auth: FirebaseAuth, private val db: FirebaseFirestore) {
     fun addUserTDB(user: FirebaseUser, onSuccess: ()->Unit, onFailure: (msg: String?)->Unit) {
@@ -20,7 +22,6 @@ class ProfileHelper(private val auth: FirebaseAuth, private val db: FirebaseFire
     }
 
     fun getUser(onSuccess: (user: User) -> Unit, onFailure: (msg: String?) -> Unit) {
-        Log.d("idsi", auth.currentUser?.uid!!)
         auth.currentUser?.let { currentUser->
             db.collection("users").document(currentUser.uid).get()
                 .addOnSuccessListener { document ->
@@ -38,5 +39,19 @@ class ProfileHelper(private val auth: FirebaseAuth, private val db: FirebaseFire
                     onFailure.invoke(it.localizedMessage)
                 }
         }
+    }
+
+    fun editProfile(name: String, cityId: String, status: String, about: String,
+        onSuccess: () -> Unit, onFailure: (msg: String?) -> Unit) {
+        val user = hashMapOf("name" to name, "city" to db.collection("cities").document(cityId),
+            "status" to status, "about" to about)
+        db.collection("users").document(auth.currentUser!!.uid)
+            .set(user, SetOptions.merge())
+            .addOnSuccessListener {
+                onSuccess.invoke()
+            }
+            .addOnFailureListener {
+                onFailure.invoke(it.localizedMessage)
+            }
     }
 }
