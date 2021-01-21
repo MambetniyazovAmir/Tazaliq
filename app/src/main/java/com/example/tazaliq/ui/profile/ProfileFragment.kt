@@ -4,23 +4,33 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.tazaliq.R
 import com.example.tazaliq.core.BaseFragment
 import com.example.tazaliq.core.ResourceState
+import com.example.tazaliq.core.extentions.onClick
 import com.example.tazaliq.core.extentions.visibility
 import com.example.tazaliq.databinding.FragmentProfileBinding
+import com.example.tazaliq.ui.main.MainFragmentDirections
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment: BaseFragment(R.layout.fragment_profile) {
     private val viewModel: ProfileViewModel by viewModel()
     private lateinit var binding: FragmentProfileBinding
+    private lateinit var navController: NavController
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfileBinding.bind(view)
+        navController = Navigation.findNavController(view)
         setObservers()
         viewModel.getUser()
+        binding.btnSettings.onClick {
+            val action = MainFragmentDirections.actionMainFragmentToSettingFragment()
+            navController.navigate(action)
+        }
     }
 
     private fun setObservers() {

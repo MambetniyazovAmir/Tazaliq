@@ -18,4 +18,14 @@
     <string name="about_myself">О себе</string>
     <string name="default_about_text">Напишите коротко о себе и чем вы занимаетесь</string>
     <string name="profile_title">Профиль</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="account">Аккаунт</string>
+    <string name="quantity">Ура! Вместе мы сдали более 84048.721 кг</string>
+    <string name="about_app">О приложении</string>
+    <string name="app">Приложение</string>
+    <string name="logout">Выход</string>
+    <string name="FAQ">Частые вопросы</string>
+    <string name="ecobox">Установить экобоксы</string>
+    <string name="want_franchise">Хочу франшизу</string>
+    <string name="feedback">Оставить отзыв</string>
 </resources>
