@@ -12,7 +12,6 @@ import com.example.tazaliq.core.ResourceState
 import com.example.tazaliq.core.extentions.onClick
 import com.example.tazaliq.core.extentions.visibility
 import com.example.tazaliq.databinding.FragmentProfileBinding
-import com.example.tazaliq.ui.main.MainFragmentDirections
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,7 +27,7 @@ class ProfileFragment: BaseFragment(R.layout.fragment_profile) {
         setObservers()
         viewModel.getUser()
         binding.btnSettings.onClick {
-            val action = MainFragmentDirections.actionMainFragmentToSettingFragment()
+            val action = ProfileFragmentDirections.actionProfileFragmentToSettingFragment()
             navController.navigate(action)
         }
     }
