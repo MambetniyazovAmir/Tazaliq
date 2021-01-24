@@ -28,4 +28,7 @@
     <string name="ecobox">Установить экобоксы</string>
     <string name="want_franchise">Хочу франшизу</string>
     <string name="feedback">Оставить отзыв</string>
+    <string name="settings">Настройки</string>
+    <string name="change_img_avatar">Сменить фото профиля</string>
+    <string name="data">Данные</string>
 </resources>
