@@ -8,6 +8,7 @@ import com.example.tazaliq.data.firebase.ProfileHelper
 import com.example.tazaliq.ui.about.AboutViewModel
 import com.example.tazaliq.ui.auth.login.LoginViewModel
 import com.example.tazaliq.ui.auth.registration.RegistrationViewModel
+import com.example.tazaliq.ui.edit_profile.EditProfileViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -45,4 +46,5 @@ val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
     viewModel { RegistrationViewModel(get(), get()) }
     viewModel { ProfileViewModel(get()) }
+    viewModel { EditProfileViewModel(get()) }
 }

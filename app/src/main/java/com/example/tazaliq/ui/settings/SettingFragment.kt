@@ -19,7 +19,7 @@ class SettingFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSettingsBinding.bind(view)
-        navController = Navigation.findNavController(view)
+        navController = Navigation.findNavController(requireActivity(), R.id.root_nav_host)
         val action = MainFragmentDirections.actionMainFragmentToEditProfileFragment()
         binding.tvEditProfile.onClick {
             navController.navigate(action)

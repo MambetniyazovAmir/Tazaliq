@@ -15,7 +15,7 @@ import com.example.tazaliq.databinding.FragmentProfileBinding
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ProfileFragment: BaseFragment(R.layout.fragment_profile) {
+class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
     private val viewModel: ProfileViewModel by viewModel()
     private lateinit var binding: FragmentProfileBinding
     private lateinit var navController: NavController
