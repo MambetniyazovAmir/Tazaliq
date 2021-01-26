@@ -28,6 +28,9 @@ class EditProfileFragment : BaseFragment(R.layout.fragment_edit_profile) {
             viewModel.editProfile(binding.etName.text.toString(), binding.etCity.text.toString(), binding.etStatus.text.toString(),
             binding.etAbout.text.toString(), onSuccess, onFailure)
         }
+        binding.btnCancel.onClick {
+            navController.popBackStack()
+        }
     }
 
     private val onSuccess: () -> Unit = {
