@@ -18,7 +18,7 @@ class AboutFragment: Fragment(R.layout.fragment_about) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.aboutList.observe(this, Observer {
+        viewModel.aboutList.observe(this, {
             adapter.setData(it)
         })
     }
