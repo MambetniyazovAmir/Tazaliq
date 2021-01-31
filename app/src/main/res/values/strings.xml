@@ -32,4 +32,10 @@
     <string name="change_img_avatar">Сменить фото профиля</string>
     <string name="data">Данные</string>
     <string name="about_app_text">Мобильное приложение отображает на карте все пункты приема вторсырья Каракалпакстана. Пункты-партнеры, отмеченные на карте, начисляют вам бонусы(1кг = бонусы). Бонусы можно обменять на подарки, билеты в кино или кофе у наших партнеров.</string>
+    <string name="company_name">Имя компании</string>
+    <string name="phone">Номер телефона</string>
+    <string name="address">Адрес, город</string>
+    <string name="send">Отправить</string>
+    <string name="city">Город</string>
+    <string name="message">Сообщение</string>
 </resources>
