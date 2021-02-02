@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_mainFragment_to_franchiseFragment"
             app:destination="@id/franchiseFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_FAQFragment"
+            app:destination="@id/FAQFragment" />
     </fragment>
 
     <fragment
@@ -91,5 +94,10 @@
         android:name="com.example.tazaliq.ui.want_franchise.FranchiseFragment"
         android:label="FranchiseFragment"
         tools:layout="@layout/fragment_franchise" />
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.tazaliq.ui.faq.FAQFragment"
+        android:label="FAQFragment"
+        tools:layout="@layout/fragment_faq"/>
 
 </navigation>

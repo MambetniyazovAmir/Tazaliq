@@ -31,6 +31,10 @@ class SettingFragment : Fragment(R.layout.fragment_settings) {
             action = MainFragmentDirections.actionMainFragmentToAboutAppFragment()
             navController.navigate(action)
         }
+        binding.tvFAQ.onClick {
+            action = MainFragmentDirections.actionMainFragmentToFAQFragment()
+            navController.navigate(action)
+        }
         binding.tvAddEcoBox.onClick {
             action = MainFragmentDirections.actionMainFragmentToInstallEcoboxFragment()
             navController.navigate(action)

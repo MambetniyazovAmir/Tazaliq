@@ -4,11 +4,13 @@ import androidx.room.Room
 import com.example.tazaliq.data.TazaliqDatabase
 import com.example.tazaliq.data.firebase.AuthHelper
 import com.example.tazaliq.data.firebase.CityHelper
+import com.example.tazaliq.data.firebase.FAQHelper
 import com.example.tazaliq.data.firebase.ProfileHelper
 import com.example.tazaliq.ui.about.AboutViewModel
 import com.example.tazaliq.ui.auth.login.LoginViewModel
 import com.example.tazaliq.ui.auth.registration.RegistrationViewModel
 import com.example.tazaliq.ui.edit_profile.EditProfileViewModel
+import com.example.tazaliq.ui.faq.FAQViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -30,6 +32,7 @@ val dataModule = module {
     single { AuthHelper(get()) }
     single { ProfileHelper(get(), get()) }
     single { CityHelper(get()) }
+    single { FAQHelper(get()) }
 }
 
 val firebaseModule = module {
@@ -47,4 +50,5 @@ val viewModelModule = module {
     viewModel { RegistrationViewModel(get(), get()) }
     viewModel { ProfileViewModel(get()) }
     viewModel { EditProfileViewModel(get(), get()) }
+    viewModel { FAQViewModel(get()) }
 }
