@@ -8,7 +8,6 @@ import androidx.navigation.Navigation
 import com.example.tazaliq.R
 import com.example.tazaliq.core.extentions.onClick
 import com.example.tazaliq.databinding.FragmentFranchiseBinding
-import kotlinx.android.synthetic.main.activity_main.*
 
 class FranchiseFragment : Fragment(R.layout.fragment_franchise) {
 

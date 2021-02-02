@@ -21,6 +21,9 @@ class SettingFragment : Fragment(R.layout.fragment_settings) {
         binding = FragmentSettingsBinding.bind(view)
         navController = Navigation.findNavController(requireActivity(), R.id.root_nav_host)
         var action = MainFragmentDirections.actionMainFragmentToEditProfileFragment()
+        binding.btnBack.onClick {
+            navController.popBackStack()
+        }
         binding.tvEditProfile.onClick {
             navController.navigate(action)
         }
