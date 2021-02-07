@@ -121,8 +121,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/tvCity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvCity"
-        app:layout_constraintTop_toTopOf="@id/tvCity" />
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        android:layout_marginStart="@dimen/margin_standard"
+        app:layout_constraintTop_toTopOf="@id/tvCity"
+        style="@style/Widget.AppCompat.Spinner.Underlined"/>
 
     <TextView
         android:id="@+id/tvStatus"
