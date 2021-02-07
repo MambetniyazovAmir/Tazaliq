@@ -29,14 +29,16 @@ class EditProfileFragment : BaseFragment(R.layout.fragment_edit_profile) {
         viewModel.getUser()
         viewModel.getAllCities()
         binding.btnDone.onClick {
-            viewModel.editProfile(
-                binding.etName.text.toString(),
-                binding.spCity.selectedItem.toString(),
-                binding.etStatus.text.toString(),
-                binding.etAbout.text.toString(),
-                onSuccess,
-                onFailure
-            )
+            viewModel.cities.value?.data?.get(binding.spCity.selectedItemPosition)?.let { it1 ->
+                viewModel.editProfile(
+                    binding.etName.text.toString(),
+                    it1.id,
+                    binding.etStatus.text.toString(),
+                    binding.etAbout.text.toString(),
+                    onSuccess,
+                    onFailure
+                )
+            }
         }
         binding.btnCancel.onClick {
             navController.popBackStack()

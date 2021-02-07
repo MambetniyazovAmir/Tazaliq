@@ -43,7 +43,7 @@ class ProfileHelper(private val auth: FirebaseAuth, private val db: FirebaseFire
  
     fun editProfile(name: String, cityId: String, status: String, about: String,
         onSuccess: () -> Unit, onFailure: (msg: String?) -> Unit) {
-        val user = hashMapOf("name" to name, "city" to db.collection("cities").document(cityId),
+        val user = hashMapOf("name" to name, "city" to cityId,
             "status" to status, "about" to about)
         db.collection("users").document(auth.currentUser!!.uid)
             .set(user, SetOptions.merge())
