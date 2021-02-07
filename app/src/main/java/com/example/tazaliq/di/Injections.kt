@@ -2,10 +2,7 @@ package com.example.tazaliq.di
 
 import androidx.room.Room
 import com.example.tazaliq.data.TazaliqDatabase
-import com.example.tazaliq.data.firebase.AuthHelper
-import com.example.tazaliq.data.firebase.CityHelper
-import com.example.tazaliq.data.firebase.FAQHelper
-import com.example.tazaliq.data.firebase.ProfileHelper
+import com.example.tazaliq.data.firebase.*
 import com.example.tazaliq.ui.about.AboutViewModel
 import com.example.tazaliq.ui.auth.login.LoginViewModel
 import com.example.tazaliq.ui.auth.registration.RegistrationViewModel
@@ -33,6 +30,7 @@ val dataModule = module {
     single { ProfileHelper(get(), get()) }
     single { CityHelper(get()) }
     single { FAQHelper(get()) }
+    single { EcoBoxHelper(get()) }
 }
 
 val firebaseModule = module {
