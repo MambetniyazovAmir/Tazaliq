@@ -8,6 +8,7 @@ import com.example.tazaliq.ui.auth.login.LoginViewModel
 import com.example.tazaliq.ui.auth.registration.RegistrationViewModel
 import com.example.tazaliq.ui.edit_profile.EditProfileViewModel
 import com.example.tazaliq.ui.faq.FAQViewModel
+import com.example.tazaliq.ui.install_ecoboxes.InstallEcoBoxViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -49,4 +50,5 @@ val viewModelModule = module {
     viewModel { ProfileViewModel(get()) }
     viewModel { EditProfileViewModel(get(), get()) }
     viewModel { FAQViewModel(get()) }
+    viewModel { InstallEcoBoxViewModel(get()) }
 }

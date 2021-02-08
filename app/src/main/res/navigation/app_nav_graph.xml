@@ -86,7 +86,7 @@
         tools:layout="@layout/fragment_about_app" />
     <fragment
         android:id="@+id/installEcoboxFragment"
-        android:name="com.example.tazaliq.ui.install_ecoboxes.InstallEcoboxFragment"
+        android:name="com.example.tazaliq.ui.install_ecoboxes.InstallEcoBoxFragment"
         android:label="InstallEcoboxFragment"
         tools:layout="@layout/fragment_install_ecobox" />
     <fragment
