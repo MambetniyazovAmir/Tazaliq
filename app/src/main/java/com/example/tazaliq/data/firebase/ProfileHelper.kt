@@ -9,7 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
 class ProfileHelper(private val auth: FirebaseAuth, private val db: FirebaseFirestore) {
-    fun addUserTDB(user: FirebaseUser, onSuccess: ()->Unit, onFailure: (msg: String?)->Unit) {
+    fun addUserToDB(user: FirebaseUser, onSuccess: ()->Unit, onFailure: (msg: String?)->Unit) {
         db.collection("users")
             .document(user.uid)
             .set(User(id = user.uid))

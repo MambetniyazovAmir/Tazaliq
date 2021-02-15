@@ -16,6 +16,6 @@ class RegistrationViewModel(
     }
 
     fun addUserToRemoteDB(user: FirebaseUser, onSuccess:()->Unit, onFailure: (msg: String?) -> Unit) {
-        profileHelper.addUserTDB(user, onSuccess, onFailure)
+        profileHelper.addUserToDB(user, onSuccess, onFailure)
     }
 }

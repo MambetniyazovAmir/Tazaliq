@@ -1,7 +1,5 @@
 package com.example.tazaliq.di
 
-import androidx.room.Room
-import com.example.tazaliq.data.TazaliqDatabase
 import com.example.tazaliq.data.firebase.*
 import com.example.tazaliq.ui.about.AboutViewModel
 import com.example.tazaliq.ui.auth.login.LoginViewModel
@@ -12,26 +10,18 @@ import com.example.tazaliq.ui.install_ecoboxes.InstallEcoBoxViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
 val dataModule = module {
-    single {
-        Room.databaseBuilder(
-            androidContext(),
-            TazaliqDatabase::class.java,
-            "TazaliqDatabase"
-        ).build()
-    }
-    single { get<TazaliqDatabase>().aboutDao() }
     single { AuthHelper(get()) }
     single { ProfileHelper(get(), get()) }
     single { CityHelper(get()) }
     single { FAQHelper(get()) }
     single { EcoBoxHelper(get()) }
+    single { AboutHelper(get()) }
 }
 
 val firebaseModule = module {
@@ -44,7 +34,7 @@ val executorModule = module {
 }
 
 val viewModelModule = module {
-    viewModel { AboutViewModel(get(), get()) }
+    viewModel { AboutViewModel(get()) }
     viewModel { LoginViewModel(get()) }
     viewModel { RegistrationViewModel(get(), get()) }
     viewModel { ProfileViewModel(get()) }
