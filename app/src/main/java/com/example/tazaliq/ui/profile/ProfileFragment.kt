@@ -41,7 +41,7 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
     }
 
     private fun scanQRCode() {
-        val integrator = IntentIntegrator(requireActivity()).apply {
+        val integrator = IntentIntegrator.forSupportFragment(this).apply {
             captureActivity = CaptureActivity::class.java
             setOrientationLocked(false)
             setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
@@ -82,7 +82,7 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
                     // Converting the data to json format
                     val obj = JSONObject(result.contents)
                     // Show values in UI.
-                    toastLN(obj.getString("site_name"))
+                    binding.tvMarket.text = result.contents
 
                 } catch (e: JSONException) {
                     e.printStackTrace()
