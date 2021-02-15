@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
 import com.example.tazaliq.R
 import com.example.tazaliq.core.BaseFragment
 import com.example.tazaliq.core.ResourceState
@@ -62,6 +63,8 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
                             binding.tvStatus.text = it.status
                         if (it.about.isNotEmpty())
                             binding.tvAboutValue.text = it.about
+                        if (it.imageUrl.isNotEmpty())
+                            Glide.with(this).load(it.imageUrl).centerCrop().into(binding.imgAvatar)
                     }
                     binding.progressBar.visibility(false)
                 }
