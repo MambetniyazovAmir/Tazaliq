@@ -7,4 +7,5 @@ data class User(
     var about: String = "",
     var city: String = "",
     var imageUrl: String = "",
+    var quantity: Int = 0
 )

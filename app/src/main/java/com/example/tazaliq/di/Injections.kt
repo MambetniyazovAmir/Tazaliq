@@ -8,6 +8,7 @@ import com.example.tazaliq.ui.edit_profile.EditProfileViewModel
 import com.example.tazaliq.ui.faq.FAQViewModel
 import com.example.tazaliq.ui.install_ecoboxes.InstallEcoBoxViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
+import com.example.tazaliq.ui.rating.RatingViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -22,6 +23,7 @@ val dataModule = module {
     single { FAQHelper(get()) }
     single { EcoBoxHelper(get()) }
     single { AboutHelper(get()) }
+    single { RatingHelper(get()) }
 }
 
 val firebaseModule = module {
@@ -41,4 +43,5 @@ val viewModelModule = module {
     viewModel { EditProfileViewModel(get(), get()) }
     viewModel { FAQViewModel(get()) }
     viewModel { InstallEcoBoxViewModel(get()) }
+    viewModel { RatingViewModel(get(), get()) }
 }
