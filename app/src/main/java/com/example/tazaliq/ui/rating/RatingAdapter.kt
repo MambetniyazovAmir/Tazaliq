@@ -1,16 +1,16 @@
-package com.example.tazaliq.ui.rating.adapter
+package com.example.tazaliq.ui.rating
 
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.tazaliq.core.BaseAdapter
 import com.example.tazaliq.core.extentions.inflate
-import com.example.tazaliq.data.model.RatingModel
 import com.example.tazaliq.data.model.User
 import kotlinx.android.synthetic.main.rating_item_view.view.*
 
 class RatingAdapter(private val itemResId: Int) :
-    com.example.tazaliq.core.BaseAdapter<User?, RatingAdapter.RatingViewHolder>(itemResId) {
+    BaseAdapter<User?, RatingAdapter.RatingViewHolder>(itemResId) {
 
     inner class RatingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun populateModel(model: User?, position: Int) {

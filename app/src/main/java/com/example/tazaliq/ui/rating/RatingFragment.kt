@@ -3,14 +3,12 @@ package com.example.tazaliq.ui.rating
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
-import androidx.fragment.app.Fragment
 import com.example.tazaliq.R
 import com.example.tazaliq.core.BaseFragment
 import com.example.tazaliq.core.ResourceState
 import com.example.tazaliq.core.extentions.visibility
 import com.example.tazaliq.data.model.City
 import com.example.tazaliq.databinding.FragmentRatingBinding
-import com.example.tazaliq.ui.rating.adapter.RatingAdapter
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
