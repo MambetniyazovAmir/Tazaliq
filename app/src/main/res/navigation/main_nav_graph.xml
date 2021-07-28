@@ -19,11 +19,20 @@
         android:id="@+id/profileFragment"
         android:name="com.example.tazaliq.ui.profile.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ratingFragment"
         android:name="com.example.tazaliq.ui.rating.RatingFragment"
         android:label="RatingFragment"
         tools:layout="@layout/fragment_rating" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.tazaliq.ui.settings.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>

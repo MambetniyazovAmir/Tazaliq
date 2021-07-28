@@ -9,8 +9,33 @@
     <string name="input_your_password">Введите пароль</string>
     <string name="confirm_password">Повторите пароль</string>
     <string name="please_fill_all_fields">Пожалуйста, заполните все полей.</string>
-    <string name="name">Amirniyaz</string>
+    <string name="name">Ваше имя</string>
     <string name="bio">account bio</string>
     <string name="stats">Статистика</string>
-    <string name="market">Магазин: 0Б</string>
+    <string name="market">Магазин:</string>
+    <string name="my_purchases">Мои покупки</string>
+    <string name="achievements">Достижения:</string>
+    <string name="about_myself">О себе</string>
+    <string name="default_about_text">Напишите коротко о себе и чем вы занимаетесь</string>
+    <string name="profile_title">Профиль</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="account">Аккаунт</string>
+    <string name="quantity">Ура! Вместе мы сдали более 84048.721 кг</string>
+    <string name="about_app">О приложении</string>
+    <string name="app">Приложение</string>
+    <string name="logout">Выход</string>
+    <string name="FAQ">Частые вопросы</string>
+    <string name="ecobox">Установить экобоксы</string>
+    <string name="want_franchise">Хочу франшизу</string>
+    <string name="feedback">Оставить отзыв</string>
+    <string name="settings">Настройки</string>
+    <string name="change_img_avatar">Сменить фото профиля</string>
+    <string name="data">Данные</string>
+    <string name="about_app_text">Мобильное приложение отображает на карте все пункты приема вторсырья Каракалпакстана. Пункты-партнеры, отмеченные на карте, начисляют вам бонусы(1кг = бонусы). Бонусы можно обменять на подарки, билеты в кино или кофе у наших партнеров.</string>
+    <string name="company_name">Имя компании</string>
+    <string name="phone">Номер телефона</string>
+    <string name="address">Адрес, город</string>
+    <string name="send">Отправить</string>
+    <string name="city">Город</string>
+    <string name="message">Сообщение</string>
 </resources>

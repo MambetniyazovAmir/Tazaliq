@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/ic_before_white_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:gravity="center_vertical"
+                android:text="@string/account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccount" />
+
+            <TextView
+                android:id="@+id/tvEditProfile"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/edit_profile"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_outline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEditProfile" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/logout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_baseline_exit_to_app_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLogout" />
+
+            <TextView
+                android:id="@+id/tvApp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:gravity="center_vertical"
+                android:text="@string/app"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvApp" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/about_app"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_outline_home_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line3" />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+
+            <TextView
+                android:id="@+id/tvFAQ"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/FAQ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_baseline_help_outline_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line4" />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFAQ" />
+
+            <TextView
+                android:id="@+id/tvAddEcoBox"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/ecobox"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_baseline_check_box_outline_blank_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line5" />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddEcoBox" />
+
+            <TextView
+                android:id="@+id/tvWantFranchise"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/want_franchise"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_baseline_link_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line6" />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWantFranchise" />
+
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="@string/feedback"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_standard"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_outline_mode_comment_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line7" />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFeedback" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
