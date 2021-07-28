@@ -21,7 +21,10 @@
         android:layout_height="@dimen/match_constraint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spCity" />
+        app:layout_constraintTop_toBottomOf="@id/spCity"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
