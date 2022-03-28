@@ -69,6 +69,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
+    implementation 'com.yandex.android:maps.mobile:4.0.0-lite'
+
     kapt "androidx.room:room-compiler:2.2.6"
 
     implementation 'org.osmdroid:osmdroid-android:6.1.2'

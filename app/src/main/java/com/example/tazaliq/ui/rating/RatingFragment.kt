@@ -9,7 +9,6 @@ import com.example.tazaliq.core.ResourceState
 import com.example.tazaliq.core.extentions.visibility
 import com.example.tazaliq.data.model.City
 import com.example.tazaliq.databinding.FragmentRatingBinding
-import kotlinx.android.synthetic.main.fragment_profile.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RatingFragment : BaseFragment(R.layout.fragment_rating) {
@@ -27,9 +26,9 @@ class RatingFragment : BaseFragment(R.layout.fragment_rating) {
     }
 
     private fun setObservers() {
-        viewModel.cities.observe(viewLifecycleOwner, { res ->
+        viewModel.cities.observe(viewLifecycleOwner) { res ->
             when (res.status) {
-                ResourceState.LOADING -> progressBar.visibility(true)
+                ResourceState.LOADING -> binding.progressBar.visibility(true)
                 ResourceState.SUCCESS -> {
                     res.data?.let {
                         if (it.isNotEmpty()) {
@@ -47,9 +46,9 @@ class RatingFragment : BaseFragment(R.layout.fragment_rating) {
                     binding.progressBar.visibility(false)
                 }
             }
-        })
-        viewModel.users.observe(viewLifecycleOwner, {res ->
-            when(res.status) {
+        }
+        viewModel.users.observe(viewLifecycleOwner) { res ->
+            when (res.status) {
                 ResourceState.LOADING -> toastLN("loading")
                 ResourceState.SUCCESS -> {
                     res.data?.let {
@@ -60,6 +59,6 @@ class RatingFragment : BaseFragment(R.layout.fragment_rating) {
                     toastLN(res.message)
                 }
             }
-        })
+        }
     }
 }
