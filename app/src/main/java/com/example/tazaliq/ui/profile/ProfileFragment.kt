@@ -39,6 +39,10 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
         binding.btnQRCode.onClick {
             scanQRCode()
         }
+        binding.llMarket.onClick {
+            val action = ProfileFragmentDirections.actionProfileFragmentToMarketFragment()
+            navController.navigate(action)
+        }
     }
 
     private fun scanQRCode() {

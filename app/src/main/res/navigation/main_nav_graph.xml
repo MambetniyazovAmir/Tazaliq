@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_profileFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_marketFragment"
+            app:destination="@id/marketFragment" />
     </fragment>
     <fragment
         android:id="@+id/ratingFragment"
@@ -34,5 +37,10 @@
         android:name="com.example.tazaliq.ui.settings.SettingFragment"
         android:label="SettingFragment"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/marketFragment"
+        tools:layout="@layout/fragment_market"
+        android:name="com.example.tazaliq.ui.market.MarketFragment"
+        android:label="MarketFragment" />
 
 </navigation>
