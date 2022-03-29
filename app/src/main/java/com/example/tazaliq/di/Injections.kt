@@ -10,6 +10,7 @@ import com.example.tazaliq.ui.install_ecoboxes.InstallEcoBoxViewModel
 import com.example.tazaliq.ui.market.MarketViewModel
 import com.example.tazaliq.ui.profile.ProfileViewModel
 import com.example.tazaliq.ui.rating.RatingViewModel
+import com.example.tazaliq.ui.want_franchise.FranchiseViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -47,4 +48,5 @@ val viewModelModule = module {
     viewModel { InstallEcoBoxViewModel(get()) }
     viewModel { RatingViewModel(get(), get()) }
     viewModel { MarketViewModel(get()) }
+    viewModel { FranchiseViewModel(get()) }
 }

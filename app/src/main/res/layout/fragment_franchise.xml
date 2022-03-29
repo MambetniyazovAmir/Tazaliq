@@ -51,18 +51,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etName" />
 
-    <TextView
-        android:id="@+id/tvCity"
+    <Spinner
+        android:id="@+id/spCity"
         android:layout_width="@dimen/match_constraint"
-        android:layout_height="@dimen/item_height"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_standard"
-        android:gravity="center_vertical"
-        android:text="@string/city"
-        android:textSize="@dimen/text_size_standard"
-        app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+        android:gravity="center"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvCity"-->
+    <!--        android:layout_width="@dimen/match_constraint"-->
+    <!--        android:layout_height="@dimen/item_height"-->
+    <!--        android:layout_margin="@dimen/margin_standard"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:text="@string/city"-->
+    <!--        android:textSize="@dimen/text_size_standard"-->
+    <!--        app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/etPhone" />-->
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etMessageText"
@@ -74,7 +85,7 @@
         android:lines="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCity" />
+        app:layout_constraintTop_toBottomOf="@id/spCity" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSend"
@@ -87,4 +98,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etMessageText" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,15 +14,17 @@ import com.example.tazaliq.ui.main.MainFragmentDirections
 class SettingFragment : Fragment(R.layout.fragment_settings) {
 
     private lateinit var navController: NavController
+    private lateinit var navController1: NavController
     private lateinit var binding: FragmentSettingsBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentSettingsBinding.bind(view)
         navController = Navigation.findNavController(requireActivity(), R.id.root_nav_host)
+        navController1 = Navigation.findNavController(requireActivity(), R.id.mainNavHost)
         var action = MainFragmentDirections.actionMainFragmentToEditProfileFragment()
         binding.btnBack.onClick {
-            navController.popBackStack()
+            navController1.popBackStack()
         }
         binding.tvEditProfile.onClick {
             navController.navigate(action)
