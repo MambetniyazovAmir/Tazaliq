@@ -23,7 +23,6 @@ class LocationFragment : BaseFragment(R.layout.fragment_location) {
         MapKitFactory.getInstance().onStart()
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLocationBinding.bind(view)
@@ -33,6 +32,10 @@ class LocationFragment : BaseFragment(R.layout.fragment_location) {
             Animation(Animation.Type.SMOOTH, 0f),
             null
         )
+        map.map.mapObjects.addPlacemark(Point(41.260772, 69.319158))
+        map.map.mapObjects.addPlacemark(Point(41.279593, 69.326689))
+        map.map.mapObjects.addPlacemark(Point(41.378876, 69.300856))
+        map.map.mapObjects.addPlacemark(Point(41.254784, 69.203488))
     }
 
     override fun onStop() {
